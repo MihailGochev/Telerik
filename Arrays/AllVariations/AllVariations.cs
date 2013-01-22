@@ -7,12 +7,12 @@ class AllVariations
     static void Main()
     {
         Console.WriteLine("Please enter N");
-        int variationLenght = int.Parse(Console.ReadLine());
+        int combinationLenght = int.Parse(Console.ReadLine());
         Console.WriteLine("Please enter K");
         int numberCount = int.Parse(Console.ReadLine());
         int[] numbers = new int[numberCount];
 
-        Variations(0, numbers, numberCount - 1, variationLenght);
+        Variations(0, numbers, numberCount - 1, combinationLenght);
     }
 
     static void Variations(int index, int[] numbers, int maxIndex, int length)

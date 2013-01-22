@@ -12,10 +12,10 @@ class AllCombination
         int numberCount = int.Parse(Console.ReadLine());
         int[] numbers = new int[numberCount];
 
-        Combinations(0, numbers, numberCount - 1, combinationLenght);
+        Combinations(0, numbers, numberCount - 1, combinationLenght, 1);
     }
 
-    static void Combinations(int index, int[] numbers, int maxIndex, int length)
+    static void Combinations(int index, int[] numbers, int maxIndex, int length, int nextNumber)
     {
         if (index > maxIndex)
         {
@@ -23,10 +23,10 @@ class AllCombination
         }
         else
         {
-            for (int number = 1; number <= length; number++)
+            for (int number = nextNumber; number <= length; number++)
             {
                 numbers[index] = number;
-                Combinations(index + 1, numbers, maxIndex, length);
+                Combinations(index + 1, numbers, maxIndex, length, nextNumber++);
             }
         }
     }
