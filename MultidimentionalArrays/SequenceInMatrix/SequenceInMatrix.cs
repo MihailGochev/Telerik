@@ -1,21 +1,20 @@
 ﻿using System;
 using System.Linq;
 
-
-class FindLargestArea
+class SequenceInMatrix
 {
     static int maxLenght = 0;
     static int currentLenght;
 
     static void Main()
     {
-        int?[,] field = 
+        int[,] field = 
         {
-            {1, 3, 2, 2, 2, 4},
-            {3, 3, 3, 2, 4, 4},
-            {4, 3, 1, 2, 3, 3},
-            {4, 3, 1, 3, 3, 1},
-            {4, 3, 3, 3, 1, 1},
+            {3, 3, 2, 2, 2, 4},
+            {5, 3, 3, 2, 4, 4},
+            {4, 5, 1, 2, 3, 3},
+            {4, 3, 5, 3, 3, 1},
+            {4, 3, 3, 5, 1, 1},
         };
 
         PrintMatrix(field);
@@ -24,10 +23,6 @@ class FindLargestArea
         {
             for (int col = 0; col < field.GetLength(1); col++)
             {
-                if (field[row, col] != null)
-                {
-                    CheckElement(row, col, field, field[row, col]);
-                }
                 currentLenght = 0;
             }
         }
@@ -35,7 +30,7 @@ class FindLargestArea
     }
 
 
-    static void CheckElement(int row, int col, int?[,] field, int? value)
+    static void CheckElement(int row, int col, int[,] field, int value)
     {
         if (OutOfBounds(row, col, field) || field[row, col] != value)
         {
@@ -47,21 +42,11 @@ class FindLargestArea
         }
 
         currentLenght++;
-        field[row, col] = null;
 
-        CheckElement(row + 1, col, field, value);
-        CheckElement(row, col + 1, field, value);
-        CheckElement(row - 1, col, field, value);
-        CheckElement(row, col - 1, field, value);
-        ////Whether diagonals are concidered neighbors or not
-        //CheckElement(row + 1, col - 1, field, value);
-        //CheckElement(row + 1, col + 1, field, value);
-        //CheckElement(row - 1, col + 1, field, value);
-        //CheckElement(row - 1, col - 1, field, value);
 
     }
 
-    static bool OutOfBounds(int row, int col, int?[,] field)
+    static bool OutOfBounds(int row, int col, int[,] field)
     {
         if (col < 0 || row < 0 || row > field.GetLength(0) - 1 || col > field.GetLength(1) - 1)
         {
@@ -70,7 +55,7 @@ class FindLargestArea
         return false;
     }
 
-    static void PrintMatrix(int?[,] matrix)
+    static void PrintMatrix(int[,] matrix)
     {
         for (int row = 0; row < matrix.GetLength(0); row++)
         {
