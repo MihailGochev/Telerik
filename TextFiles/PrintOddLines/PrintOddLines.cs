@@ -11,19 +11,17 @@ class PrintOddLines
 
         using (inputFile)
         {
-            input = inputFile.ReadToEnd();
-        }
-
-        string[] lines = input.Split('\n');
-
-        for (int line = 0; line < lines.Length; line++)
-        {
-            if (line % 2 == 1)
+            int line = 1;           
+            input = inputFile.ReadLine();
+            while (input != null)
             {
-                Console.Write(lines[line]);
-                Console.WriteLine();
+                if (line % 2 == 1)
+                {
+                    Console.WriteLine(input);
+                }
+                line++;
+                input = inputFile.ReadLine();
             }
         }
-
     }
 }

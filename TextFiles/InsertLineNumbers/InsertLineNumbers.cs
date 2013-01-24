@@ -12,16 +12,16 @@ class InsertLineNumbers
 
         using (inputFile)
         {
-            input = inputFile.ReadToEnd();
-        }
-
-        string[] lines = input.Split('\n');
-
-        using (outputFile)
-        {
-            for (int line = 0; line < lines.Length; line++)
+            using (outputFile)
             {
-                outputFile.Write("{0}: {1}", line + 1, lines[line]);
+                int line = 1;
+                input = inputFile.ReadLine();
+                while (input != null)
+                {
+                    outputFile.WriteLine("{0}: {1}", line, input);
+                    line++;
+                    input = inputFile.ReadLine();
+                }
             }
         }
     }
