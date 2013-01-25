@@ -23,7 +23,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10. NFactorial", "NFactoria
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11. AddPolynomials", "AddPolynomials\11. AddPolynomials.csproj", "{BC57BF88-8668-49D9-AF0D-49C404E3E2A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubtractAndMultiplyPolynomial", "SubtractAndMultiplyPolynomial\SubtractAndMultiplyPolynomial.csproj", "{97E7E0FB-5572-4C26-AF6E-45F829432E41}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12. SubtractAndMultiplyPolynomial", "SubtractAndMultiplyPolynomial\12. SubtractAndMultiplyPolynomial.csproj", "{97E7E0FB-5572-4C26-AF6E-45F829432E41}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
