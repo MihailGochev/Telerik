@@ -1,7 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecimalToBinary", "DecimalToBinary\DecimalToBinary.csproj", "{75446CBC-DE31-4C81-BC3F-17634BF61933}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. DecimalToBinary", "DecimalToBinary\01. DecimalToBinary.csproj", "{75446CBC-DE31-4C81-BC3F-17634BF61933}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. BinaryToDecimal", "BinaryToDecimal\02. BinaryToDecimal.csproj", "{337A4A72-6187-465C-B826-D48C16C32753}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +15,10 @@ Global
 		{75446CBC-DE31-4C81-BC3F-17634BF61933}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75446CBC-DE31-4C81-BC3F-17634BF61933}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75446CBC-DE31-4C81-BC3F-17634BF61933}.Release|Any CPU.Build.0 = Release|Any CPU
+		{337A4A72-6187-465C-B826-D48C16C32753}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{337A4A72-6187-465C-B826-D48C16C32753}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{337A4A72-6187-465C-B826-D48C16C32753}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{337A4A72-6187-465C-B826-D48C16C32753}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

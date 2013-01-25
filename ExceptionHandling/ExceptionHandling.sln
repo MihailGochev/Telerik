@@ -1,7 +1,25 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. CalculateSquareRoot", "CalculateSquareRoot\01. CalculateSquareRoot.csproj", "{E340704D-B98C-456A-9A4C-EC28F80E2145}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. OpenFile", "OpenFile\03. OpenFile.csproj", "{E9F0C408-0F22-4FA7-A6CE-F31BC380733C}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E340704D-B98C-456A-9A4C-EC28F80E2145}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E340704D-B98C-456A-9A4C-EC28F80E2145}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E340704D-B98C-456A-9A4C-EC28F80E2145}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E340704D-B98C-456A-9A4C-EC28F80E2145}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9F0C408-0F22-4FA7-A6CE-F31BC380733C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9F0C408-0F22-4FA7-A6CE-F31BC380733C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9F0C408-0F22-4FA7-A6CE-F31BC380733C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9F0C408-0F22-4FA7-A6CE-F31BC380733C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
