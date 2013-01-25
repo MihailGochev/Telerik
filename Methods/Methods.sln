@@ -25,6 +25,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11. AddPolynomials", "AddPo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12. SubtractAndMultiplyPolynomial", "SubtractAndMultiplyPolynomial\12. SubtractAndMultiplyPolynomial.csproj", "{97E7E0FB-5572-4C26-AF6E-45F829432E41}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13, Tasks", "Tasks\13, Tasks.csproj", "{BBD4D121-8DCA-4251-899E-DD8713B5F684}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14. MinMaxAvgSum", "MinMaxAvgSum\14. MinMaxAvgSum.csproj", "{D94E3F12-7B87-4746-B596-19E7EAFCD6A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15. MinMaxAvgSumGeneric", "MinMaxAvgSumGeneric\15. MinMaxAvgSumGeneric.csproj", "{C10F98D4-735C-4C5F-93DC-FA685CA5C4EF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -79,6 +85,18 @@ Global
 		{97E7E0FB-5572-4C26-AF6E-45F829432E41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97E7E0FB-5572-4C26-AF6E-45F829432E41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97E7E0FB-5572-4C26-AF6E-45F829432E41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBD4D121-8DCA-4251-899E-DD8713B5F684}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBD4D121-8DCA-4251-899E-DD8713B5F684}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBD4D121-8DCA-4251-899E-DD8713B5F684}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBD4D121-8DCA-4251-899E-DD8713B5F684}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D94E3F12-7B87-4746-B596-19E7EAFCD6A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D94E3F12-7B87-4746-B596-19E7EAFCD6A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D94E3F12-7B87-4746-B596-19E7EAFCD6A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D94E3F12-7B87-4746-B596-19E7EAFCD6A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C10F98D4-735C-4C5F-93DC-FA685CA5C4EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C10F98D4-735C-4C5F-93DC-FA685CA5C4EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C10F98D4-735C-4C5F-93DC-FA685CA5C4EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C10F98D4-735C-4C5F-93DC-FA685CA5C4EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
