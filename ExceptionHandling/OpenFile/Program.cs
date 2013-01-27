@@ -11,7 +11,7 @@ class Program
 
         try
         {
-            string[] file = File.ReadAllLines(@"C:\WINDOWS\win.ini");
+            string[] file = File.ReadAllLines(path);
             foreach (var item in file)
             {
                 Console.WriteLine(item);
@@ -47,7 +47,7 @@ class Program
         }
         catch (NotSupportedException)
         {
-            Console.WriteLine("Invalid file path!");
+            Console.WriteLine("Invalid file!");
         }
         catch (IOException)
         {

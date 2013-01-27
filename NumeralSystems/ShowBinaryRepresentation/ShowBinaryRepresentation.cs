@@ -6,15 +6,25 @@ class DecimalToBinary
 {
     static void Main()
     {
-        int number = 240;
+        short number = short.MaxValue;
 
-        Console.WriteLine("{0} in binary is: {1}", number, ConvertDecToBin(number));
+        Console.WriteLine("{0} in binary is: {1}", number, ConvertDecToBin(number).PadLeft(16, '0'));
+
+        number = short.MinValue;
+
+        Console.WriteLine("{0} in binary is: {1}", number, ConvertDecToBin(number).PadLeft(16, '0'));
 
     }
 
     static string ConvertDecToBin(int number)
     {
         int baseOutput = 2;
+
+        if (number < 0)
+        {
+            number *= -1;
+        }
+
 
         StringBuilder outputNumber = new StringBuilder();
 

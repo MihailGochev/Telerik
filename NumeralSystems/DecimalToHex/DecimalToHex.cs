@@ -2,19 +2,19 @@
 using System.Linq;
 using System.Text;
 
-class DecimalToBinary
+class DecimalToHex
 {
     static void Main()
     {
         int number = 240;
 
-        Console.WriteLine("{0} in binary is: {1}", number, ConvertDecToBin(number));
+        Console.WriteLine("{0} in hexadecimal is: {1}", number, ConvertDecToHex(number));
 
     }
 
-    static string ConvertDecToBin(int number)
+    static string ConvertDecToHex(int number)
     {
-        int baseOutput = 2;
+        int baseOutput = 16;
 
         StringBuilder outputNumber = new StringBuilder();
 

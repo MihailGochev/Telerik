@@ -5,13 +5,13 @@ class BinaryToDecimal
 {
     static void Main()
     {
-        string number = "11110000";
-        Console.WriteLine("{0} in decimal is: {1}", number, ConvertBinToDec(number));
+        string number = "F0";
+        Console.WriteLine("{0} in decimal is: {1}", number, ConvertHexToDec(number));
     }
 
-    static long ConvertBinToDec(string number)
+    static long ConvertHexToDec(string number)
     {
-        int baseInput = 2;
+        int baseInput = 16;
         number = number.ToUpper();
         long decimalRepresentation = 0;
 
