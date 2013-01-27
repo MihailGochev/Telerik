@@ -7,35 +7,30 @@ class FindSubMatrix
     static void Main()
     {
         StreamReader inputFile = new StreamReader(@"..\..\input.txt");
+        int[,] matrix;
 
-         int[,] matrix ={
- {3, 2,  5,   6,    7,  8},
- {6, 2,  7,   21,   66, 2},
- {6, 22, 66,  2,    1,  6},
- {3, 5,  500, 1,    1,  8},
- {6, 5,  1,   1,    1, 2},
- {7, 5,  1,   1000, 6,  1},
-        };
         using (inputFile)
         {
-            string input = inputFile.ReadLine();
-            string[] line = input.Split(' ');
-            matrix = new int[line.Length, line.Length];
+            int matriSize = int.Parse(inputFile.ReadLine());
+            matrix = new int[matriSize, matriSize];
+            string rows;
+            string[] numbers;
 
-            for (int index = 0; index < line.Length; index++)
-			{
-                matrix[index] = int.Parse(line[index]);
-			}
-
-            matrix = new int[input.Length,input.Length];
-            for (int row = 0; row < input.Length; row++)
-			{
-
-			}
+            for (int row = 0; row < matrix.GetLength(0); row++)
+            {
+                rows = inputFile.ReadLine();
+                numbers = rows.Split(' ');
+                for (int col = 0; col < numbers.Length; col++)
+                {
+                    matrix[row, col] = int.Parse(numbers[col]);
+                }
+            }
         }
 
-        int subMatrixSize = 3;
+
+        int subMatrixSize = 2;
         int maxSum = int.MinValue;
+
         for (int row = 0; row < (matrix.GetLength(0) - subMatrixSize) + 1; row++)
         {
             for (int col = 0; col < (matrix.GetLength(1) - subMatrixSize) + 1; col++)
