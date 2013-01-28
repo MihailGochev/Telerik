@@ -1,43 +1,92 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 class MessageInABottle
 {
 
     static void Main()
     {
-        int numberLenght = 4;
-        string code = "ABCD";
+        string code = Console.ReadLine();
+        int numberLenght = code.Length;
+        string combination = Console.ReadLine();
         int maxNumber = 1 << (numberLenght - 1);
+        Hashtable table = new Hashtable();
+        int resultsFound = 0;
+        List<string> finalResult = new List<string>();
+
+        {
+            char currentChar = ' ';
+            int startIndex = 0;
+            int lenght = 0;
+            bool numberFound = false;
+
+            for (int index = 0; index < combination.Length; index++)
+            {
+                if (!Char.IsDigit(combination[index]))
+                {
+                    if (numberFound)
+                    {
+                        table[combination.Substring(startIndex, lenght)] = currentChar;
+                        numberFound = false;
+                    }
+                    currentChar = combination[index];
+                    numberFound = true;
+                    startIndex = index + 1;
+                    lenght = 0;
+                }
+                else
+                {
+                    lenght++;
+                }
+            }
+            table[combination.Substring(startIndex, lenght)] = currentChar;
+        }
 
 
         for (int currentCombination = 0; currentCombination < maxNumber; currentCombination++)
         {
-            Console.WriteLine();
-            Console.WriteLine(Convert.ToString(currentCombination, 2).PadLeft(numberLenght, '0'));
             int[] result = ReturnCombinations(Convert.ToString(currentCombination, 2).PadLeft(numberLenght, '0'));
 
-
+            StringBuilder sb = new StringBuilder();
 
             int index = 0;
             int startIndex = 0;
+            bool resultFound = true;
 
             while (result[index] > 0)
             {
-                Console.WriteLine(result[index]);
-                Console.WriteLine(code.Substring(index, result[index]));
-                if (result[index] == 1)
+                if (table[code.Substring(startIndex, result[index])] != null)
                 {
-                    startIndex += result[index] + 1;
-
+                    sb.Append(table[code.Substring(startIndex, result[index])]);
                 }
                 else
                 {
-                    startIndex += result[index];
+                    resultFound = false;
+                    break;
                 }
+
+                startIndex += result[index];
                 index++;
             }
+            if (resultFound)
+            {
+                resultsFound++;
+                finalResult.Add(sb.ToString());
+            }
         }
+
+
+        Console.WriteLine(resultsFound);
+
+        finalResult.Sort();
+        foreach (string item in finalResult)
+        {
+            Console.WriteLine(item);
+        }
+
     }
 
     static int[] ReturnCombinations(string number)
