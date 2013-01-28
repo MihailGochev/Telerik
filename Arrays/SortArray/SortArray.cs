@@ -6,7 +6,7 @@ class SortArray
     static void Main()
     {
         Random randomGenerator = new Random();
-        int numberOfElements = 20;//RNG.Next(2, 300);
+        int numberOfElements = 20;
         int[] numbers = new int[numberOfElements];
         int[] sortedNumbers = new int[numberOfElements];
         int currentNum;

@@ -13,7 +13,7 @@ class MostFrequentNumber
             numbers[currentNum] = randomGenerator.Next(-20, 30);
         }
 
-        Array.Sort(numbers);
+        // Array.Sort(numbers);
 
         int maxLenght = 0;
         int maxNumber = 0;

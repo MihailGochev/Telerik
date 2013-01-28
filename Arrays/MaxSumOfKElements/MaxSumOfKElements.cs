@@ -13,6 +13,7 @@ class MaxSumOfKElements
         int maxSumStartIndex = 0;
         int[] numbers = new int[numberOfElements];
 
+        Console.WriteLine("Sequence lenght {0}.", maxSumCount);
         Console.WriteLine("Input {0} numbers:", numberOfElements);
         for (int currentNumber = 0; currentNumber < numberOfElements; currentNumber++)
         {

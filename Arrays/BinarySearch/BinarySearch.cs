@@ -6,7 +6,7 @@ class BinarySearchSortedArray
     static void Main()
     {
         int[] numbers = new int[100];
-        int number = 15;
+        int number = 16;
         Random randomGenerator = new Random();
 
         Console.WriteLine("Unsorted array:");

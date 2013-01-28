@@ -46,6 +46,5 @@ class CompareArrayLexicographically
         {
             Console.WriteLine("{0} = {1}", firstWord, secondWord);
         }
-
     }
 }

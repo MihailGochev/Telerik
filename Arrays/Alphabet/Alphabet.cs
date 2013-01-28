@@ -17,10 +17,10 @@ class Alphabet
 
         char[] word = wordString.ToCharArray();
 
-        for (int i = 0; i < word.Length; i++)
+        for (int index = 0; index < word.Length; index++)
         {
-            int position = word[i] - 65;
-            Console.WriteLine("Letter {0} | Possition in the array {1,2} | Array {2}", word[i], position, alphabet[position]);
+            int position = word[index] - 65;
+            Console.WriteLine("Letter {0} | Possition in the array {1,2} | Array {2}", word[index], position, alphabet[position]);
         }
     }
 }
