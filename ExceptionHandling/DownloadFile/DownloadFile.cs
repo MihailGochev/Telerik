@@ -7,14 +7,13 @@ class DownloadFile
 {
     static void Main()
     {
-        Console.WriteLine("Please enter the file's address:");
-        string fileAdress = Console.ReadLine();
-        string file = Path.GetFileName(fileAdress);
-
         using (WebClient client = new WebClient())
         {
             try
             {
+                Console.WriteLine("Please enter the file's address:");
+                string fileAdress = Console.ReadLine();
+                string file = Path.GetFileName(fileAdress);
                 client.DownloadFile(fileAdress, String.Format("../../{0}", file));
                 Console.WriteLine("Download complete!");
             }
@@ -32,7 +31,15 @@ class DownloadFile
             }
             catch (NotSupportedException)
             {
-                Console.WriteLine("The operation was not supported.");
+                Console.WriteLine("The operation was not supported!");
+            }
+            catch (IOException)
+            {
+                Console.WriteLine("Input/Output error!");
+            }
+            catch (OutOfMemoryException)
+            {
+                Console.WriteLine("Not enough memory!");
             }
         }
     }

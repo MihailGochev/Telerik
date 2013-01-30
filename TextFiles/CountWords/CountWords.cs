@@ -10,10 +10,9 @@ class CountWords
 {
     static void Main()
     {
-        WordCounter();
-
         try
         {
+            WordCounter();
         }
         catch (FileNotFoundException e)
         {

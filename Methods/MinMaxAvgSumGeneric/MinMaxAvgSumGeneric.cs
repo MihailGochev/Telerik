@@ -5,7 +5,7 @@ class MinMaxAvgSumGeneric
 {
     static void Main()
     {
-        long[] numbers = { 76, 222, 77, 2, 4, 7, 124, 7, 21, 44, 22, 66, 1, };
+        decimal[] numbers = { 76, 222, 77, 2, 4, 7, 124, 7, 21, 44, 22, 66, 1, };
         Console.WriteLine("Min value: {0}", GetMinValue(numbers));
         Console.WriteLine("Max value: {0}", GetMaxValue(numbers));
         Console.WriteLine("Average value: {0}", GetAverageValue(numbers));

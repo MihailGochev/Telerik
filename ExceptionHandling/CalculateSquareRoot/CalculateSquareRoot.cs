@@ -9,8 +9,8 @@ class CalculateSquareRoot
         Console.Write("Please enter the number: ");
         try
         {
-            number=decimal.Parse(Console.ReadLine());
-            Console.WriteLine("Square root of {0} is {1}." ,number,Math.Sqrt((double)number));
+            number = decimal.Parse(Console.ReadLine());
+            Console.WriteLine("Square root of {0} is {1}.", number, Math.Sqrt((double)number));
         }
         catch (FormatException)
         {

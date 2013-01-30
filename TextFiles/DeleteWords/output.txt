@@ -1,4 +1,4 @@
-﻿Lorem ipsum  sit amet, consectetur adipiscing elit. 
+Lorem ipsum  sit amet, consectetur adipiscing elit. 
 Vestibulum  scelerisque laoreet. Nam fringilla laoreet elit, 
 sit amet aliquam urna  eget. Cras auctor metus non nisi aliquam 
 iaculis.    orci . Nam augue metus, hendrerit ac bibendum id, hendrerit 

@@ -6,7 +6,7 @@ class BinaryToHex
 {
     static void Main()
     {
-        string number = "11110";
+        string number = "11110000";
         Console.WriteLine("{0} to hexadecimal is {1}", number,ConvertBinToHex(number));
     }
 

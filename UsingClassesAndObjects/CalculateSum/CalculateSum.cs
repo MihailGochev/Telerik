@@ -5,6 +5,7 @@ class CalculateSum
 {
     static void Main()
     {
+        Console.WriteLine("Please enter the number sequence (on a single line, separated by spaces):");
         string numbers = Console.ReadLine();
         Console.WriteLine("Sum: {0}", CalcSum(numbers));
     }

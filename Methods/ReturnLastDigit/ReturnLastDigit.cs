@@ -7,7 +7,6 @@ class ReturnLastDigit
         int number = int.Parse(Console.ReadLine());
 
         Console.WriteLine("The last digit of the number {0} is: {1}", number, LastDigitAsWord(number));
-
     }
 
     static string LastDigitAsWord(int number)

@@ -6,11 +6,10 @@ class Program
 {
     static void Main()
     {
-        Console.Write("Please enter the file path:");
-        string path = Console.ReadLine();
-
         try
         {
+            Console.Write("Please enter the file path:");
+            string path = Console.ReadLine();
             string[] file = File.ReadAllLines(path);
             foreach (var item in file)
             {
@@ -52,6 +51,10 @@ class Program
         catch (IOException)
         {
             Console.WriteLine("Invalid file path!");
+        }
+        catch (OutOfMemoryException)
+        {
+            Console.WriteLine("Not enough memory!");
         }
     }
 }

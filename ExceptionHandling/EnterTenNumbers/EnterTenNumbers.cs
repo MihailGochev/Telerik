@@ -21,6 +21,7 @@ class EnterTenNumbers
             catch (FormatException)
             {
                 Console.WriteLine("Invalid Number!");
+
             }
             catch (OverflowException)
             {
@@ -29,6 +30,10 @@ class EnterTenNumbers
             catch (ArgumentNullException)
             {
                 Console.WriteLine("No value was entered!");
+            }
+            catch (OutOfMemoryException)
+            {
+                Console.WriteLine("Not enough memory!");
             }
             catch (Exception)
             {

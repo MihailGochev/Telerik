@@ -5,7 +5,7 @@ class BiggerThanNeighbors
     static void Main()
     {
         int[] array = { 5, 2, 3, 4, 5, 6, 7, 8, 7, 9 };
-        int index = 0;
+        int index = 5;
         Console.WriteLine("Is {0} bigger than its neighbors: {1}", array[index], CheckNeighbors(array, index));
     }
 

@@ -6,9 +6,9 @@ class ConvertNumeralSystem
 {
     static void Main()
     {
-        int inputBase = 16;
-        int outputBase = 16;
-        string number = "A5505159";
+        int inputBase = 10;
+        int outputBase = 8;
+        string number = "200";
 
         Console.WriteLine(ConvertNumber(inputBase, outputBase, number));
     }
@@ -18,7 +18,7 @@ class ConvertNumeralSystem
         number = number.ToUpper();
         long decimalRepresentation = 0;
 
-        if (baseInput != 10)
+        if (baseInput != 10)    
         {
 
             for (int index = 0, power = number.Length - 1; index < number.Length; index++, power--)
