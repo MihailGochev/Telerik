@@ -1,0 +1,12 @@
+testet - 0
+augue - 1
+Lorem - 1
+ipsum - 1
+testtestSed - 1
+iaculis - 1
+aliquam - 2
+Nam - 2
+metus - 2
+amet - 3
+sit - 3
+test - 7
