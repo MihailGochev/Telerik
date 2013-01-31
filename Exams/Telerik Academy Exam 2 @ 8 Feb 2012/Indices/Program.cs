@@ -19,42 +19,52 @@ class Program
             numbers[i] = int.Parse(inputNumbersArray[i]);
         }
 
+        int index = 0;
         bool cycleFound = false;
         int cycleStartIndex = 0;
-        int cycleEndIndex = 0;
 
-        while (cycleStartIndex >= 0 && cycleEndIndex < numberLenght)
+        while (true)
         {
-            if (!visited[cycleStartIndex])
+
+            if (numbers[index] < numbers.Length)
             {
-                result.Add(cycleStartIndex);
-                visited[cycleStartIndex] = true;
-                cycleStartIndex = numbers[cycleStartIndex];
+                if (!visited[index])
+                {
+                    result.Add(index);
+                    visited[index] = true;
+                    index = numbers[index];
+                }
+                else
+                {
+                    cycleFound = true;
+                    cycleStartIndex = index;
+                    break;
+                }
+
             }
             else
             {
-                cycleFound = true;
-                cycleEndIndex = cycleStartIndex;
-                cycleStartIndex = cycleStartIndex;
+                result.Add(index);
                 break;
             }
         }
+
 
         for (int i = 0; i < result.Count; i++)
         {
             if (i == cycleStartIndex && cycleFound)
             {
-                Console.Write("{0}(", result[i]);
+                Console.Write("({0}", result[i]);
             }
             else
             {
-                if (i == result.Count - 1)
+                if (i == 0)
                 {
                     Console.Write("{0}", result[i]);
                 }
                 else
                 {
-                    Console.Write("{0} ", result[i]);
+                    Console.Write(" {0}", result[i]);
                 }
             }
         }
@@ -70,4 +80,3 @@ class Program
         }
     }
 }
-
