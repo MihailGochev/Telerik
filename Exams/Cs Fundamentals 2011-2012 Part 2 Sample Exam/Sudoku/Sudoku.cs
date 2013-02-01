@@ -78,21 +78,21 @@ class Sudoku
         return true;
     }
 
-    static int MaxDimension(int dimention)
+    static int MaxDimension(int dimension)
     {
-        if (dimention < 3)
+        if (dimension < 3)
         {
-            dimention = 3;
+            dimension = 3;
         }
-        else if (dimention < 6)
+        else if (dimension < 6)
         {
-            dimention = 6;
+            dimension = 6;
         }
         else
         {
-            dimention = 9;
+            dimension = 9;
         }
-        return dimention;
+        return dimension;
     }
 
     static void PlaySudoku(int[,] field)
