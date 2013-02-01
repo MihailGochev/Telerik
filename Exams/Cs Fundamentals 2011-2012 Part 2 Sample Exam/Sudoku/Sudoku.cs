@@ -29,11 +29,11 @@ class Sudoku
             }
         }
 
-        PlaySudokuh(field);
+        PlaySudoku(field);
     }
 
 
-    static bool ValidNumbah(int[,] field, int row, int col)
+    static bool ValidNumber(int[,] field, int row, int col)
     {
         int number = field[row, col];
         for (int currentCol = 0; currentCol < field.GetLength(0); currentCol++)
@@ -58,8 +58,8 @@ class Sudoku
             }
         }
 
-        int maxRow = MaxDimention(row);
-        int maxCol = MaxDimention(col);
+        int maxRow = MaxDimension(row);
+        int maxCol = MaxDimension(col);
 
         for (int currentRow = maxRow - 3; currentRow < maxRow; currentRow++)
         {
@@ -78,7 +78,7 @@ class Sudoku
         return true;
     }
 
-    static int MaxDimention(int dimention)
+    static int MaxDimension(int dimention)
     {
         if (dimention < 3)
         {
@@ -95,7 +95,7 @@ class Sudoku
         return dimention;
     }
 
-    static void PlaySudokuh(int[,] field)
+    static void PlaySudoku(int[,] field)
     {
         bool resultFound = true;
         for (int row = 0; row < field.GetLength(0); row++)
@@ -108,9 +108,9 @@ class Sudoku
                     for (int number = 1; number < 10; number++)
                     {
                         field[row, col] = number;
-                        if (ValidNumbah(field, row, col))
+                        if (ValidNumber(field, row, col))
                         {
-                            PlaySudokuh((int[,])field.Clone());
+                            PlaySudoku((int[,])field.Clone());
                         }
                     }
                     field[row, col] = 0;
