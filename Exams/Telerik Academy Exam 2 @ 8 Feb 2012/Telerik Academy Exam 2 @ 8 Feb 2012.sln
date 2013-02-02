@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Indices", "Indices\Indices.csproj", "{3C00AEF4-8EFF-4CD0-9FE5-D097E8E9283A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BombingCuboids", "BombingCuboids\BombingCuboids.csproj", "{00EEA658-2874-47A4-A574-BAD9ECADD75D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{3C00AEF4-8EFF-4CD0-9FE5-D097E8E9283A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C00AEF4-8EFF-4CD0-9FE5-D097E8E9283A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C00AEF4-8EFF-4CD0-9FE5-D097E8E9283A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00EEA658-2874-47A4-A574-BAD9ECADD75D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00EEA658-2874-47A4-A574-BAD9ECADD75D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00EEA658-2874-47A4-A574-BAD9ECADD75D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00EEA658-2874-47A4-A574-BAD9ECADD75D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
