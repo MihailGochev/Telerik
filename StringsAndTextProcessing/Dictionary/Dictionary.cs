@@ -22,6 +22,5 @@ class Dictionary
             Console.WriteLine("The dictionary doesn't know of this word.");
         }
 
-
     }
 }

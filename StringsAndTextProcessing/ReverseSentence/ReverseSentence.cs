@@ -13,7 +13,6 @@ class ReverseSentence
             if (Char.IsPunctuation(input[index]) || Char.IsSeparator(input[index]))
             {
                 Console.Write("{0}{1}", words[wordIndex--], input[index] == '#' ? "" : input[index].ToString());
-
             }
         }
         Console.WriteLine();

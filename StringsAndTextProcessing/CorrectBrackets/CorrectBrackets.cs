@@ -11,7 +11,6 @@ class CorrectBrackets
         Console.WriteLine("The brackets are put correctly: {0}", CheckBrackets(input));
     }
 
-
     static bool CheckBrackets(string input)
     {
         int index = 0;
