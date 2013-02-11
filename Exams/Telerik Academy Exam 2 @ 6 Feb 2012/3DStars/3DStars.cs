@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-class BombingCuboids
+class Stars3D
 {
     static char[, ,] cube;
     static int[] result = new int[200];

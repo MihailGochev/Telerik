@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Collections.Generic;
 
-class Program
+class Indices
 {
     static void Main()
     {
