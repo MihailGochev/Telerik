@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobilePhone.Library", "MobilePhone.Library\MobilePhone.Library.csproj", "{87608B28-52FB-41C5-9EAC-E23BA10FE963}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSMTest", "GSMTest\GSMTest.csproj", "{21110835-8A61-4A4B-AE6F-3EA62CEC9997}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{87608B28-52FB-41C5-9EAC-E23BA10FE963}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87608B28-52FB-41C5-9EAC-E23BA10FE963}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87608B28-52FB-41C5-9EAC-E23BA10FE963}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21110835-8A61-4A4B-AE6F-3EA62CEC9997}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21110835-8A61-4A4B-AE6F-3EA62CEC9997}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21110835-8A61-4A4B-AE6F-3EA62CEC9997}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21110835-8A61-4A4B-AE6F-3EA62CEC9997}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

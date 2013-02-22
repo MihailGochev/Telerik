@@ -1,6 +1,5 @@
 ﻿//battery characteristics
 //(model, hours idle and hours talk)
-using System;
 
 namespace MobilePhone.Library
 {
@@ -35,5 +34,36 @@ namespace MobilePhone.Library
             set { type = value; }
         }
 
+        public Battery()
+        {
+            this.model = "Generic Battery";
+            this.hoursIdle = 32;
+            this.hoursTalk = 6;
+            this.type = BatteryType.LiIon;
+        }
+
+        public Battery(string model)
+        {
+            this.model = model;
+            this.hoursIdle = 32;
+            this.hoursTalk = 6;
+            this.type = BatteryType.LiIon;
+        }
+
+        public Battery(string model, BatteryType type)
+        {
+            this.model = model;
+            this.hoursIdle = 32;
+            this.hoursTalk = 6;
+            this.type = type;
+        }
+
+        public Battery(string model, double hoursIdle, double hoursTalk, BatteryType type)
+        {
+            this.model = model;
+            this.hoursIdle = hoursIdle;
+            this.hoursTalk = hoursTalk;
+            this.type = type;
+        }
     }
 }
