@@ -4,11 +4,14 @@
 
 namespace MobilePhone.Library
 {
+    using System;
+    using System.Text;
+
     public class GSM
     {
         private string model;
         private string manufacturer;
-        private decimal price;
+        private decimal? price;
         private string owner;
         private Display displayInformation;
         private Battery batteryInformation;
@@ -27,7 +30,10 @@ namespace MobilePhone.Library
 
         public decimal Price
         {
-            get { return price; }
+            get
+            {
+                return price.GetValueOrDefault();
+            }
             set { price = value; }
         }
 
@@ -49,62 +55,32 @@ namespace MobilePhone.Library
             set { displayInformation = value; }
         }
 
-        public GSM()
+        public GSM(string model, string manufacturer)
         {
-            this.model = "3310";
-            this.manufacturer = "Nokia";
-            this.price = 15M;
-            this.owner = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
-            this.displayInformation = new Display();
-            this.batteryInformation = new Battery();
+            this.model = model;
+            this.manufacturer = manufacturer;
+            this.price = null;
+            this.owner = null;
+            this.displayInformation = null;
+            this.batteryInformation = null;
         }
 
-        public GSM(decimal price)
-        {
-            this.model = "3310";
-            this.manufacturer = "Nokia"; 
-            this.price = price;
-            this.owner = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
-            this.displayInformation = new Display();
-            this.batteryInformation = new Battery();
-        }
-
-        public GSM(Display displayInformation, Battery batteryInformation)
-        {
-            this.model = "3310";
-            this.manufacturer = "Nokia";
-            this.price = 15M;
-            this.owner = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
-            this.displayInformation = displayInformation;
-            this.batteryInformation = batteryInformation;
-        }
-
-        public GSM(string model, string manufacturer, decimal price)
+        public GSM(string model, string manufacturer, decimal price, string owner)
         {
             this.model = model;
             this.manufacturer = manufacturer;
             this.price = price;
-            this.owner = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
-            this.displayInformation = new Display();
-            this.batteryInformation = new Battery();
-        }
-
-        public GSM(string model, Display displayInformation, Battery batteryInformation)
-        {
-            this.model = model;
-            this.manufacturer = "Nokia";
-            this.price = 15M;
-            this.owner = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
-            this.displayInformation = displayInformation;
-            this.batteryInformation = batteryInformation;
+            this.owner = null;
+            this.displayInformation = null;
+            this.batteryInformation = null;
         }
 
         public GSM(string model, string manufacturer, Display displayInformation, Battery batteryInformation)
         {
             this.model = model;
             this.manufacturer = manufacturer;
-            this.price = 15M;
-            this.owner = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
+            this.price = null;
+            this.owner = null;
             this.displayInformation = displayInformation;
             this.batteryInformation = batteryInformation;
         }
@@ -117,6 +93,34 @@ namespace MobilePhone.Library
             this.owner = owner;
             this.displayInformation = displayInformation;
             this.batteryInformation = batteryInformation;
+        }
+
+        public override string ToString()
+        {
+            StringBuilder output = new StringBuilder();
+
+            output.Append(string.Format("Model: {0}{1}", model, Environment.NewLine));
+
+            output.Append(string.Format("Manufacturer: {0}{1}", manufacturer, Environment.NewLine));
+
+            if (price != null)
+            {
+                output.Append(string.Format("Price: {0}{1}", price, Environment.NewLine));
+            }
+            if (owner != null)
+            {
+                output.Append(string.Format("Owner: {0}{1}", owner, Environment.NewLine));
+            }
+            if (displayInformation != null)
+            {
+                output.Append(string.Format("Display: {1}{0}", displayInformation, Environment.NewLine));
+            }
+            if (batteryInformation != null)
+            {
+                output.Append(string.Format("Battery: {1}{0}", batteryInformation, Environment.NewLine));
+            }
+
+            return output.ToString();
         }
     }
 }

@@ -12,9 +12,9 @@ namespace GSMTest
             Battery currentBattery = new Battery("battery", 50, 20, BatteryType.LiPol);
             Display currentDisplay = new Display(740, 480, 160000000);
 
-            mobilePhones.Add(new GSM(currentDisplay, currentBattery));
+            mobilePhones.Add(new GSM("Nokia", "Nokia",currentDisplay,currentBattery));
 
-            Console.WriteLine(mobilePhones[0].DisplayInformation);
+            Console.WriteLine(mobilePhones[0]);
         }
     }
 }

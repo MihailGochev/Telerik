@@ -3,25 +3,28 @@
 
 namespace MobilePhone.Library
 {
+    using System;
+    using System.Text;
+
     public class Display
     {
-        private int displayWidth;
-        private int displayHeight;
-        private long numberOfColors;
+        private int? displayWidth;
+        private int? displayHeight;
+        private long? numberOfColors;
 
-        public int DisplayWidth
+        public int? DisplayWidth
         {
             get { return displayWidth; }
             set { displayWidth = value; }
         }
 
-        public int DisplayHeight
+        public int? DisplayHeight
         {
             get { return displayHeight; }
             set { displayHeight = value; }
         }
 
-        public long NumberOfColors
+        public long? NumberOfColors
         {
             get { return numberOfColors; }
             set { numberOfColors = value; }
@@ -29,16 +32,16 @@ namespace MobilePhone.Library
 
         public Display()
         {
-            this.displayWidth = 320;
-            this.displayHeight = 480;
-            this.numberOfColors = 16000000;
+            this.displayWidth = null;
+            this.displayHeight = null;
+            this.numberOfColors = null;
         }
 
         public Display(int displayWidth, int displayHeight)
         {
             this.displayWidth = displayWidth;
             this.displayHeight = displayHeight;
-            this.numberOfColors = 16000000;
+            this.numberOfColors = null;
         }
 
         public Display(int displayWidth, int displayHeight, long numberOfColors)
@@ -50,7 +53,22 @@ namespace MobilePhone.Library
 
         public override string ToString()
         {
-            return string.Format("Display size:{0}x{1} pixels, {2} colors.", displayWidth, displayHeight, numberOfColors);
+            StringBuilder output = new StringBuilder();
+
+            if (displayWidth != null)
+            {
+                output.Append(string.Format("   Width: {0}{1}", displayWidth, Environment.NewLine));
+            }
+            if (displayHeight != null)
+            {
+                output.Append(string.Format("   Height: {0}{1}", displayHeight, Environment.NewLine));
+            }
+            if (numberOfColors != null)
+            {
+                output.Append(string.Format("   Colors: {0}{1}", numberOfColors, Environment.NewLine));
+            }
+
+            return output.ToString();
         }
     }
 }

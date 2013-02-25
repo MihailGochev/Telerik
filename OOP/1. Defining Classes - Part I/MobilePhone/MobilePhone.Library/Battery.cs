@@ -3,12 +3,15 @@
 
 namespace MobilePhone.Library
 {
+    using System;
+    using System.Text;
+
     public class Battery
     {
         private string model;
-        private double hoursIdle;
-        private double hoursTalk;
-        private BatteryType type;
+        private double? hoursIdle;
+        private double? hoursTalk;
+        private BatteryType? type;
 
         public string Model
         {
@@ -16,45 +19,37 @@ namespace MobilePhone.Library
             set { model = value; }
         }
 
-        public double HoursIdle
+        public double? HoursIdle
         {
             get { return hoursIdle; }
             set { hoursIdle = value; }
         }
 
-        public double HoursTalk
+        public double? HoursTalk
         {
             get { return hoursTalk; }
             set { hoursTalk = value; }
         }
 
-        public BatteryType Type
+        public BatteryType? Type
         {
             get { return type; }
             set { type = value; }
         }
 
-        public Battery()
-        {
-            this.model = "Generic Battery";
-            this.hoursIdle = 32;
-            this.hoursTalk = 6;
-            this.type = BatteryType.LiIon;
-        }
-
         public Battery(string model)
         {
             this.model = model;
-            this.hoursIdle = 32;
-            this.hoursTalk = 6;
-            this.type = BatteryType.LiIon;
+            this.hoursIdle = null;
+            this.hoursTalk = null;
+            this.type = null;
         }
 
         public Battery(string model, BatteryType type)
         {
             this.model = model;
-            this.hoursIdle = 32;
-            this.hoursTalk = 6;
+            this.hoursIdle = null;
+            this.hoursTalk = null;
             this.type = type;
         }
 
@@ -64,6 +59,28 @@ namespace MobilePhone.Library
             this.hoursIdle = hoursIdle;
             this.hoursTalk = hoursTalk;
             this.type = type;
+        }
+
+        public override string ToString()
+        {
+            StringBuilder output = new StringBuilder();
+
+            output.Append(string.Format("   Model: {0}{1}", model, Environment.NewLine));
+
+            if (hoursIdle != null)
+            {
+                output.Append(string.Format("   Idle hours: {0}{1}", hoursIdle, Environment.NewLine));
+            }
+            if (hoursTalk != null)
+            {
+                output.Append(string.Format("   Talk hours: {0}{1}", hoursTalk, Environment.NewLine));
+            }
+            if (type != null)
+            {
+                output.Append(string.Format("   Battery Type: {0}{1}", type, Environment.NewLine));
+            }
+
+            return output.ToString();
         }
     }
 }
