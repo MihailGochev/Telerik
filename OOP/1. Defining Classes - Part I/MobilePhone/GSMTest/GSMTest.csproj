@@ -45,9 +45,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\MobilePhone.Library\MobilePhone.Library.csproj">
       <Project>{87608b28-52fb-41c5-9eac-e23ba10fe963}</Project>
       <Name>MobilePhone.Library</Name>

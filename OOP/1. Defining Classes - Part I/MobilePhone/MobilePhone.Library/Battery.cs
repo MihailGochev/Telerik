@@ -16,29 +16,85 @@ namespace MobilePhone.Library
         public string Model
         {
             get { return model; }
-            set { model = value; }
+            set
+            {
+                if (value == null)
+                {
+                    throw new NullReferenceException("Model cannot be null!");
+                }
+
+                if (value == String.Empty)
+                {
+                    throw new ArgumentException("Empty model!");
+                }
+                model = value;
+            }
         }
 
         public double? HoursIdle
         {
+
             get { return hoursIdle; }
-            set { hoursIdle = value; }
+            set
+            {
+                if (value == null)
+                {
+                    throw new NullReferenceException("Hours cannot be null!");
+                }
+
+                if (value < 0)
+                {
+                    throw new ArgumentException("Hours cannot be negative!");
+                }
+
+                hoursIdle = value;
+            }
         }
 
         public double? HoursTalk
         {
             get { return hoursTalk; }
-            set { hoursTalk = value; }
+            set
+            {
+                if (value == null)
+                {
+                    throw new NullReferenceException("Hours cannot be null!");
+                }
+
+                if (value < 0)
+                {
+                    throw new ArgumentException("Hours cannot be negative!");
+                }
+                hoursTalk = value;
+            }
         }
 
         public BatteryType? Type
         {
             get { return type; }
-            set { type = value; }
+            set
+            {
+                if (value == null)
+                {
+                    throw new NullReferenceException("Battery type cannot be null!");
+                }
+
+                type = value;
+            }
         }
 
         public Battery(string model)
         {
+            if (model == null)
+            {
+                throw new NullReferenceException("Model cannot be null!");
+            }
+
+            if (model == String.Empty)
+            {
+                throw new ArgumentException("Empty model!");
+            }
+
             this.model = model;
             this.hoursIdle = null;
             this.hoursTalk = null;
@@ -46,19 +102,34 @@ namespace MobilePhone.Library
         }
 
         public Battery(string model, BatteryType type)
+            : this(model)
         {
-            this.model = model;
+
+            if (type == null)
+            {
+                throw new NullReferenceException("Battery type cannot be null!");
+            }
+
             this.hoursIdle = null;
             this.hoursTalk = null;
             this.type = type;
         }
 
         public Battery(string model, double hoursIdle, double hoursTalk, BatteryType type)
+            : this(model, type)
         {
-            this.model = model;
+            if (hoursIdle == null || hoursTalk == null)
+            {
+                throw new NullReferenceException("Hours cannot be null!");
+            }
+
+            if (hoursIdle < 0 || hoursTalk < 0)
+            {
+                throw new ArgumentException("Hours cannot be negative!");
+            }
+
             this.hoursIdle = hoursIdle;
             this.hoursTalk = hoursTalk;
-            this.type = type;
         }
 
         public override string ToString()

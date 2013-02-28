@@ -15,19 +15,58 @@ namespace MobilePhone.Library
         public int? DisplayWidth
         {
             get { return displayWidth; }
-            set { displayWidth = value; }
+            set
+            {
+                if (value == null)
+                {
+                    throw new NullReferenceException("Display size cannot be null!");
+                }
+
+                if (value <= 1)
+                {
+                    throw new ArgumentException("Display size cannot be negative or zero!");
+                }
+
+                displayWidth = value;
+            }
         }
 
         public int? DisplayHeight
         {
             get { return displayHeight; }
-            set { displayHeight = value; }
+            set
+            {
+                if (value == null)
+                {
+                    throw new NullReferenceException("Display size cannot be null!");
+                }
+
+                if (value <= 1)
+                {
+                    throw new ArgumentException("Display size cannot be negative or zero!");
+                }
+
+                displayHeight = value;
+            }
         }
 
         public long? NumberOfColors
         {
             get { return numberOfColors; }
-            set { numberOfColors = value; }
+            set
+            {
+                if (value == null)
+                {
+                    throw new NullReferenceException("Number of colors cannot null!");
+                }
+
+                if (value <= 0)
+                {
+                    throw new ArgumentException("Number of colors cannot be negative or zero!");
+                }
+
+                numberOfColors = value;
+            }
         }
 
         public Display()
@@ -39,15 +78,35 @@ namespace MobilePhone.Library
 
         public Display(int displayWidth, int displayHeight)
         {
+            if (displayWidth == null || displayHeight == null)
+            {
+                throw new NullReferenceException("Display size cannot be null!");
+            }
+
+            if (displayWidth <= 1 || displayHeight <= 1)
+            {
+                throw new ArgumentException("Display size cannot be negative or zero!");
+            }
+
             this.displayWidth = displayWidth;
             this.displayHeight = displayHeight;
             this.numberOfColors = null;
         }
 
         public Display(int displayWidth, int displayHeight, long numberOfColors)
+            : this(displayWidth, displayHeight)
         {
-            this.displayWidth = displayWidth;
-            this.displayHeight = displayHeight;
+
+            if (numberOfColors == null)
+            {
+                throw new NullReferenceException("Number of colors cannot be null!");
+            }
+
+            if (numberOfColors <= 0)
+            {
+                throw new ArgumentException("Number of colors cannot be negative or zero!");
+            }
+
             this.numberOfColors = numberOfColors;
         }
 
