@@ -8,33 +8,115 @@ namespace MobilePhone.Library
 {
     using System;
 
-    class Call
+    public class Call : IComparable
     {
         private DateTime callTime;
         private string dialedNumber;
-        private int duration;
+        private int durationInSeconds;
+
+        //Used to find longest/shortest call
+        public int CompareTo(object obj)
+        {
+            if (((Call)obj).durationInSeconds > this.durationInSeconds)
+            {
+                return -1;
+            }
+            else if (((Call)obj).durationInSeconds == this.durationInSeconds)
+            {
+                return 0;
+            }
+            else
+            {
+                return 1;
+            }
+        }
 
         public DateTime CallTime
         {
             get { return callTime; }
-            set { callTime = value; }
+            set
+            {
+                if (value == null)
+                {
+                    throw new NullReferenceException("Call time cannot be null!");
+                }
+                callTime = value;
+            }
         }
 
-        public String DialedNumber
+        public string DialedNumber
         {
             get { return dialedNumber; }
-            set { dialedNumber = value; }
+            set
+            {
+                if (value == null)
+                {
+                    throw new NullReferenceException("The number cannot be null!");
+                }
+
+                if (value == String.Empty)
+                {
+                    throw new ArgumentException("Empty number!");
+                }
+                dialedNumber = value;
+            }
         }
 
         public int Duration
         {
-            get { return duration; }
-            set { duration = value; }
+            get { return durationInSeconds; }
+            set
+            {
+                if (value == null)
+                {
+                    throw new NullReferenceException("Duration cannot be null!");
+                }
+
+                if (value <= 0)
+                {
+                    throw new ArgumentException("Duration cannot be negative!");
+                }
+
+                durationInSeconds = value;
+            }
         }
 
-        public Call(DateTime callTime,string dialedNumber,int duration)
+        public Call(string dialedNumber, DateTime callTime, int durationInSeconds)
         {
+            if (callTime == null)
+            {
+                throw new NullReferenceException("Call time cannot be null!");
+            }
 
+            if (dialedNumber == null)
+            {
+                throw new NullReferenceException("The number cannot be null!");
+            }
+
+            if (dialedNumber == String.Empty)
+            {
+                throw new ArgumentException("Empty number!");
+            }
+
+            if (durationInSeconds == null)
+            {
+                throw new NullReferenceException("Duration cannot be null!");
+            }
+
+            if (durationInSeconds <= 0)
+            {
+                throw new ArgumentException("Duration cannot be negative!");
+            }
+
+
+            this.callTime = callTime;
+            this.dialedNumber = dialedNumber;
+            this.durationInSeconds = durationInSeconds;
+        }
+
+        public override string ToString()
+        {
+            return String.Format("Called number:{0} | started: {1} | ended:{2} | duration:{3}", dialedNumber, callTime, callTime.AddSeconds(durationInSeconds), durationInSeconds);
         }
     }
 }

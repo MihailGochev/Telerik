@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<JustCodeSettings Version="0.0" Timestamp="69a8a09c-a555-4f08-bf3c-657b3ae1c7f9">
+  <IgnoredErrorsAndWarningsSettings xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+    <IgnoredErrorsAndWarnings Version="2">
+      <FilePath>
+        <FileRelativePath>MobilePhone.Library/Gsm.cs</FileRelativePath>
+        <ProjectRelativePath>MobilePhone.Library/MobilePhone.Library.csproj</ProjectRelativePath>
+        <IgnoredElement>
+          <TextualIdentifier>11044749003369112398</TextualIdentifier>
+        </IgnoredElement>
+      </FilePath>
+      <FilePath>
+        <FileRelativePath>GSMTest/GSMTest.cs</FileRelativePath>
+        <ProjectRelativePath>GSMTest/GSMTest.csproj</ProjectRelativePath>
+        <IgnoredElement>
+          <TextualIdentifier>7866547131251028606</TextualIdentifier>
+        </IgnoredElement>
+        <IgnoredElement>
+          <TextualIdentifier>11124489925537794923</TextualIdentifier>
+        </IgnoredElement>
+      </FilePath>
+    </IgnoredErrorsAndWarnings>
+  </IgnoredErrorsAndWarningsSettings>
+</JustCodeSettings>

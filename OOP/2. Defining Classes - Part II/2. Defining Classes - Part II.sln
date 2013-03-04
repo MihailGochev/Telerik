@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Point3D.Library", "Point3D.Library\Point3D.Library.csproj", "{47DD21BE-A2AD-4AF5-8CBA-FF0E8FAB88E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Point3D.Test", "Point3D.Test\Point3D.Test.csproj", "{B2579BC6-9CEC-4F56-8C8D-6F9FA11D9405}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericList.Library", "GenericList.Library\GenericList.Library.csproj", "{CA06C832-E225-49D9-805D-AA14FC14FE8F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{47DD21BE-A2AD-4AF5-8CBA-FF0E8FAB88E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47DD21BE-A2AD-4AF5-8CBA-FF0E8FAB88E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47DD21BE-A2AD-4AF5-8CBA-FF0E8FAB88E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47DD21BE-A2AD-4AF5-8CBA-FF0E8FAB88E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2579BC6-9CEC-4F56-8C8D-6F9FA11D9405}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2579BC6-9CEC-4F56-8C8D-6F9FA11D9405}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2579BC6-9CEC-4F56-8C8D-6F9FA11D9405}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2579BC6-9CEC-4F56-8C8D-6F9FA11D9405}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA06C832-E225-49D9-805D-AA14FC14FE8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA06C832-E225-49D9-805D-AA14FC14FE8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA06C832-E225-49D9-805D-AA14FC14FE8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA06C832-E225-49D9-805D-AA14FC14FE8F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

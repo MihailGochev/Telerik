@@ -16,13 +16,30 @@ namespace GSMTest
             Console.OutputEncoding = System.Text.Encoding.Unicode;
             List<GSM> mobilePhones = new List<GSM>();
 
-            mobilePhones.Add(new GSM("3310", "Nokia", 1000M, "Ivan", new Display(1740, 33480, 160000000), new Battery("PK15", 50000, 2000, BatteryType.LiPol)));
-            mobilePhones.Add(new GSM("Optimus 2x", "LG", 400M, "Gerasim", new Display(1740, 33480), new Battery("PK15", 50000, 2000, BatteryType.LiPol)));
-            mobilePhones.Add(new GSM("Xperia Sola", "Sony", 600M, new Display(1740, 33480, 160000000), new Battery("PK15")));
-            mobilePhones.Add(new GSM("Lumia 720", "Nokia", 700M, new Display(1740, 33480, 160000000), new Battery("PK15")));
+            mobilePhones.Add(new GSM("3310", "Nokia", 1000M, "Ivan",
+                new Display(1740, 33480, 160000000),
+                new Battery("PK15", 50000, 2000, BatteryType.LiPol)));
+
+            mobilePhones.Add(new GSM("Optimus 2x", "LG", 400M, "Gerasim",
+                new Display(1740, 33480),
+                new Battery("PK15", 50000, 2000, BatteryType.LiPol)));
+
+            mobilePhones.Add(new GSM("Xperia Sola", "Sony", 600M,
+                new Display(1740, 33480, 160000000),
+                new Battery("PK15")));
+
+            mobilePhones.Add(new GSM("Lumia 720", "Nokia", 700M,
+                new Display(1740, 33480, 160000000),
+                new Battery("PK15")));
+
+            mobilePhones.Add(new GSM("Samsung", "Galaxy S", new
+                Display(),
+                new Battery("PK15", BatteryType.LiPol)));
+
             mobilePhones.Add(new GSM("One X", "HTC", 500M, "Georgi"));
-            mobilePhones.Add(new GSM("Samsung", "Galaxy S", new Display(), new Battery("PK15", BatteryType.LiPol)));
+
             mobilePhones.Add(new GSM("Hero", "HTC"));
+
             mobilePhones.Add(GSM.IPhone4S);
 
             foreach (var phone in mobilePhones)

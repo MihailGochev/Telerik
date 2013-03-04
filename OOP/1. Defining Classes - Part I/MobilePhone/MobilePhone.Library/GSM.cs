@@ -6,6 +6,8 @@ namespace MobilePhone.Library
 {
     using System;
     using System.Text;
+    using System.Collections.Generic;
+    using System.Linq;
 
     public class GSM
     {
@@ -15,11 +17,12 @@ namespace MobilePhone.Library
         private string owner;
         private Display displayInformation;
         private Battery batteryInformation;
-
+        private readonly List<Call> callHistory = new List<Call>();
 
         //Add a static field and a property IPhone4S in the GSM class to hold the information about iPhone 4S.
         static public GSM IPhone4S = new GSM("IPhone4S", "Apple", 1500M, new Display(640, 960, 16000000), new Battery("LIS1445APPC", 200, 14, BatteryType.LiPol));
 
+        #region Properties
         public string Model
         {
             get { return model; }
@@ -114,11 +117,12 @@ namespace MobilePhone.Library
                 {
                     throw new NullReferenceException("Display information cannot be null!");
                 }
-
                 displayInformation = value;
             }
         }
+        #endregion
 
+        #region Constructors
         public GSM(string model, string manufacturer)
         {
             if (model == String.Empty)
@@ -238,7 +242,7 @@ namespace MobilePhone.Library
             {
                 output.Append(string.Format("Owner: {0}{1}", owner, Environment.NewLine));
             }
-            if (displayInformation != null && (displayInformation.DisplayHeight != null || displayInformation.NumberOfColors!=null))
+            if (displayInformation != null && (displayInformation.DisplayHeight != null || displayInformation.NumberOfColors != null))
             {
                 output.Append(string.Format("Display: {1}{0}", displayInformation, Environment.NewLine));
             }
@@ -248,6 +252,76 @@ namespace MobilePhone.Library
             }
 
             return output.ToString();
+        }
+        #endregion
+
+        //Add methods in the GSM class for adding and deleting calls from the calls history. Add a method to clear the call history.
+        public void AddCall(string dialedNumber, DateTime callStart, int duration)
+        {
+            callHistory.Add(new Call(dialedNumber, callStart, duration));
+        }
+
+        //Deletes a specific call
+        public void DeleteCall(Call deletedCall)
+        {
+            callHistory.Remove(deletedCall);
+        }
+
+        //Deletes a call at given position
+        public void DeleteCall(int position)
+        {
+            if (position < 0 || position >= callHistory.Count)
+            {
+                throw new ArgumentException("Invalid call position!");
+            }
+
+            callHistory.RemoveAt(position);
+        }
+
+        //Deletes the longest call
+        public void DeleteLongestCall()
+        {
+            callHistory.Remove(callHistory.Max());
+        }
+
+        //Deletes the shortest call
+        public void DeleteShortestCall()
+        {
+            callHistory.Remove(callHistory.Min());
+        }
+
+        public void ClearCallHistory()
+        {
+            callHistory.Clear();
+        }
+
+        public string ShowCallHistory()
+        {
+            if (callHistory.Count == 0)
+            {
+                return "The call history is empty!";
+            }
+            StringBuilder callHistoryString = new StringBuilder();
+
+            foreach (Call call in callHistory)
+            {
+                callHistoryString.Append(String.Format("{0}{1}", call.ToString(), Environment.NewLine));
+            }
+
+            return callHistoryString.ToString();
+        }
+
+        //Add a method that calculates the total price of the calls in the call history. Assume the price per minute is fixed and is provided as a parameter.
+        public decimal TotalCallPrice(decimal callPrice)
+        {
+            decimal totalDuration = 0;
+
+            foreach (var call in callHistory)
+            {
+                totalDuration += call.Duration;
+            }
+
+            return (totalDuration / 60) * callPrice;
         }
     }
 }

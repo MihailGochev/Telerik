@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobilePhone.Library", "Mobi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSMTest", "GSMTest\GSMTest.csproj", "{21110835-8A61-4A4B-AE6F-3EA62CEC9997}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSMCallHistoryTest", "GSMCallHistoryTest\GSMCallHistoryTest.csproj", "{1E957B2A-ECF3-47BC-9E52-970D1789B6FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{21110835-8A61-4A4B-AE6F-3EA62CEC9997}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21110835-8A61-4A4B-AE6F-3EA62CEC9997}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21110835-8A61-4A4B-AE6F-3EA62CEC9997}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E957B2A-ECF3-47BC-9E52-970D1789B6FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E957B2A-ECF3-47BC-9E52-970D1789B6FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E957B2A-ECF3-47BC-9E52-970D1789B6FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E957B2A-ECF3-47BC-9E52-970D1789B6FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
