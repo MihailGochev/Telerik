@@ -12,16 +12,16 @@ namespace MobilePhone.Library
     {
         private DateTime callTime;
         private string dialedNumber;
-        private int durationInSeconds;
+        private int duration;
 
         //Used to find longest/shortest call
         public int CompareTo(object obj)
         {
-            if (((Call)obj).durationInSeconds > this.durationInSeconds)
+            if (((Call)obj).duration > this.duration)
             {
                 return -1;
             }
-            else if (((Call)obj).durationInSeconds == this.durationInSeconds)
+            else if (((Call)obj).duration == this.duration)
             {
                 return 0;
             }
@@ -64,7 +64,7 @@ namespace MobilePhone.Library
 
         public int Duration
         {
-            get { return durationInSeconds; }
+            get { return duration; }
             set
             {
                 if (value == null)
@@ -77,46 +77,20 @@ namespace MobilePhone.Library
                     throw new ArgumentException("Duration cannot be negative!");
                 }
 
-                durationInSeconds = value;
+                duration = value;
             }
         }
 
         public Call(string dialedNumber, DateTime callTime, int durationInSeconds)
         {
-            if (callTime == null)
-            {
-                throw new NullReferenceException("Call time cannot be null!");
-            }
-
-            if (dialedNumber == null)
-            {
-                throw new NullReferenceException("The number cannot be null!");
-            }
-
-            if (dialedNumber == String.Empty)
-            {
-                throw new ArgumentException("Empty number!");
-            }
-
-            if (durationInSeconds == null)
-            {
-                throw new NullReferenceException("Duration cannot be null!");
-            }
-
-            if (durationInSeconds <= 0)
-            {
-                throw new ArgumentException("Duration cannot be negative!");
-            }
-
-
-            this.callTime = callTime;
-            this.dialedNumber = dialedNumber;
-            this.durationInSeconds = durationInSeconds;
+            this.CallTime = callTime;                   //Setting the property
+            this.DialedNumber = dialedNumber;           //Setting the property
+            this.Duration = durationInSeconds;          //Setting the property
         }
 
         public override string ToString()
         {
-            return String.Format("Called number:{0} | started: {1} | ended:{2} | duration:{3}", dialedNumber, callTime, callTime.AddSeconds(durationInSeconds), durationInSeconds);
+            return String.Format("Number:{0} |Start:{1:MM/dd/yy HH:mm:ss} |End:{2:MM/dd/yy HH:mm:ss} |Duration:{3} seconds.", dialedNumber, callTime, callTime.AddSeconds(duration), duration);
         }
     }
 }

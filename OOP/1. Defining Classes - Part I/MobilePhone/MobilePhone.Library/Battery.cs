@@ -85,51 +85,25 @@ namespace MobilePhone.Library
 
         public Battery(string model)
         {
-            if (model == null)
-            {
-                throw new NullReferenceException("Model cannot be null!");
-            }
-
-            if (model == String.Empty)
-            {
-                throw new ArgumentException("Empty model!");
-            }
-
-            this.model = model;
-            this.hoursIdle = null;
-            this.hoursTalk = null;
-            this.type = null;
+            this.Model = model;     //setting the property
+            this.hoursIdle = null;  //setting the field
+            this.hoursTalk = null;  //setting the field
+            this.type = null;       //setting the field
         }
 
         public Battery(string model, BatteryType type)
             : this(model)
         {
-
-            if (type == null)
-            {
-                throw new NullReferenceException("Battery type cannot be null!");
-            }
-
-            this.hoursIdle = null;
-            this.hoursTalk = null;
-            this.type = type;
+            this.hoursIdle = null;  //setting the field
+            this.hoursTalk = null;  //setting the field
+            this.Type = type;       //setting the property
         }
 
         public Battery(string model, double hoursIdle, double hoursTalk, BatteryType type)
             : this(model, type)
         {
-            if (hoursIdle == null || hoursTalk == null)
-            {
-                throw new NullReferenceException("Hours cannot be null!");
-            }
-
-            if (hoursIdle < 0 || hoursTalk < 0)
-            {
-                throw new ArgumentException("Hours cannot be negative!");
-            }
-
-            this.hoursIdle = hoursIdle;
-            this.hoursTalk = hoursTalk;
+            this.HoursIdle = hoursIdle;  //setting the property
+            this.HoursTalk = hoursTalk;  //setting the property
         }
 
         public override string ToString()

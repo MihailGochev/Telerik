@@ -71,43 +71,22 @@ namespace MobilePhone.Library
 
         public Display()
         {
-            this.displayWidth = null;
-            this.displayHeight = null;
-            this.numberOfColors = null;
+            this.displayWidth = null;    //setting the field
+            this.displayHeight = null;   //setting the field
+            this.numberOfColors = null;  //setting the field
         }
 
         public Display(int displayWidth, int displayHeight)
         {
-            if (displayWidth == null || displayHeight == null)
-            {
-                throw new NullReferenceException("Display size cannot be null!");
-            }
-
-            if (displayWidth <= 1 || displayHeight <= 1)
-            {
-                throw new ArgumentException("Display size cannot be negative or zero!");
-            }
-
-            this.displayWidth = displayWidth;
-            this.displayHeight = displayHeight;
-            this.numberOfColors = null;
+            this.DisplayWidth = displayWidth;    //setting the property
+            this.DisplayHeight = displayHeight;  //setting the property  
+            this.numberOfColors = null;          //setting the field
         }
 
         public Display(int displayWidth, int displayHeight, long numberOfColors)
             : this(displayWidth, displayHeight)
         {
-
-            if (numberOfColors == null)
-            {
-                throw new NullReferenceException("Number of colors cannot be null!");
-            }
-
-            if (numberOfColors <= 0)
-            {
-                throw new ArgumentException("Number of colors cannot be negative or zero!");
-            }
-
-            this.numberOfColors = numberOfColors;
+            this.NumberOfColors = numberOfColors; //setting the property
         }
 
         public override string ToString()

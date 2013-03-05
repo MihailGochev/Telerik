@@ -125,55 +125,20 @@ namespace MobilePhone.Library
         #region Constructors
         public GSM(string model, string manufacturer)
         {
-            if (model == String.Empty)
-            {
-                throw new ArgumentException("Model cannot be an empty string!");
-            }
-
-            if (model == null)
-            {
-                throw new NullReferenceException("Model cannot be null!");
-            }
-
-            if (manufacturer == String.Empty)
-            {
-                throw new ArgumentException("Manufacturer cannot be an empty string!");
-            }
-
-            if (manufacturer == null)
-            {
-                throw new NullReferenceException("Manufacturer cannot be null!");
-            }
-
-            this.model = model;
-            this.manufacturer = manufacturer;
-            this.price = null;
-            this.owner = null;
-            this.displayInformation = null;
-            this.batteryInformation = null;
+            this.Model = model; //setting the property
+            this.Manufacturer = manufacturer; //setting the property
+            this.price = null; //setting the field
+            this.owner = null; //setting the field
+            this.displayInformation = null; //setting the field
+            this.batteryInformation = null; //setting the field
         }
 
         public GSM(string model, string manufacturer, decimal price, string owner)
             : this(model, manufacturer)
         {
 
-            if (owner == String.Empty)
-            {
-                throw new ArgumentException("Owner cannot be an empty string!");
-            }
-
-            if (owner == null)
-            {
-                throw new NullReferenceException("Manufacturer cannot be null!");
-            }
-
-            if (price <= 0)
-            {
-                throw new ArgumentException("Price cannot be negative or zero!");
-            }
-
-            this.price = price;
-            this.owner = owner;
+            this.Price = price; //setting the property
+            this.Owner = owner; //setting the property
 
         }
 
@@ -181,18 +146,8 @@ namespace MobilePhone.Library
             : this(model, manufacturer)
         {
 
-            if (displayInformation == null)
-            {
-                throw new NullReferenceException("Display information cannot be null!");
-            }
-
-            if (batteryInformation == null)
-            {
-                throw new NullReferenceException("Battery information cannot be null!");
-            }
-
-            this.displayInformation = displayInformation;
-            this.batteryInformation = batteryInformation;
+            this.DisplayInformation = displayInformation; //setting the property
+            this.BatteryInformation = batteryInformation; //setting the property
         }
 
 
@@ -200,31 +155,16 @@ namespace MobilePhone.Library
             : this(model, manufacturer, displayInformation, batteryInformation)
         {
 
-            if (price <= 0)
-            {
-                throw new ArgumentException("Price cannot be negative or zero!");
-            }
-
-            this.price = price;
-            this.owner = null;
+            this.Price = price; //setting the property
+            this.owner = null; //setting the field
         }
 
         public GSM(string model, string manufacturer, decimal price, string owner, Display displayInformation, Battery batteryInformation)
             : this(model, manufacturer, price, displayInformation, batteryInformation)
         {
-
-            if (owner == String.Empty)
-            {
-                throw new ArgumentException("Owner cannot be an empty string!");
-            }
-
-            if (owner == null)
-            {
-                throw new NullReferenceException("Manufacturer cannot be null!");
-            }
-
-            this.owner = owner;
+            this.Owner = owner; //setting the property
         }
+        #endregion
 
         public override string ToString()
         {
@@ -253,7 +193,6 @@ namespace MobilePhone.Library
 
             return output.ToString();
         }
-        #endregion
 
         //Add methods in the GSM class for adding and deleting calls from the calls history. Add a method to clear the call history.
         public void AddCall(string dialedNumber, DateTime callStart, int duration)
