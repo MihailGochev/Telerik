@@ -15,5 +15,4 @@ namespace VersionAttribute
             this.Version = version;
         }
     }
-
 }

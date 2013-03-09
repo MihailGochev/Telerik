@@ -14,5 +14,10 @@ namespace StudentClass
             this.LastName = lastName;
             this.Age = age;
         }
+
+        public override string ToString()
+        {
+            return String.Format("Name:{0} {1} Age:{2}", FirstName, LastName, Age);
+        }
     }
 }

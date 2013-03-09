@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-//            return (T)Convert.ChangeType(Convert.ToDecimal((object)first) * Convert.ToDecimal((object)second), typeof(T));
 
 public static class Extensions
 {
@@ -76,12 +75,13 @@ public static class Extensions
 
 }
 
-
 class IEnumerableExtensions
 {
     static void Main()
     {
-        List<int> myList = new List<int>() { 3, 5, 6, 7, 8, 51, 15 };
+        //List<double> myList = new List<double>() { 3.5, 5.71, 16.3, 1.77, 1.58, 15.1, 94.1465 }; //Tests with double
+        List<int> myList = new List<int>() { 3, 5, 6, 7, 8, 51, 15 }; //Tests with int
+
         Console.WriteLine("Input:");
         foreach (var num in myList)
         {

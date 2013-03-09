@@ -14,7 +14,6 @@ namespace VersionAttribute
             {
                 Console.WriteLine("Class version: {0}. ", attr.Version);
             }
-
         }
     }
 }

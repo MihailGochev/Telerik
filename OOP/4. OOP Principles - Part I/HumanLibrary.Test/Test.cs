@@ -34,20 +34,20 @@ class Test
 
         List<Worker> workers = new List<Worker>
         {
-                new Worker("Ivan","Zahariev",100, 50),
-                new Worker("Pesho","Georgiev",200, 20),
-                new Worker("Spas","Nedelchev",400, 140),
-                new Worker("Georgi","Kostadinov",500, 110),
-                new Worker("Pavel","Ivelinov",1000, 12),
-                new Worker("Gerasim","Dimitrov",200, 23),
-                new Worker("Angel","Spasov",500, 32),
-                new Worker("Nenko","Ivanov",220, 44),
+            new Worker("Liudmil","Zahariev",100, 50),
+            new Worker("Asen","Georgiev",200, 20),
+            new Worker("Petyr","Nedelchev",400, 140),
+            new Worker("Todor","Kostadinov",500, 110),
+            new Worker("Hristo","Ivelinov",1000, 12),
+            new Worker("Kolio","Dimitrov",200, 23),
+            new Worker("Kaliqn","Spasov",500, 32),
+            new Worker("Joro","Ivanov",220, 44),
         };
 
         Console.WriteLine("Unsorted workers:");
         foreach (var worker in workers)
         {
-            Console.WriteLine("Name: {0} {1} | MPH: {2}",worker.FirstName,worker.LastName,worker.MoneyPerHour());
+            Console.WriteLine("Name: {0} {1} | MPH: {2}", worker.FirstName, worker.LastName, worker.MoneyPerHour());
         }
 
         Console.WriteLine("Sorted workers:");
@@ -68,7 +68,7 @@ class Test
             mergedLists.Add(student);
         }
 
-        Console.WriteLine("Sorted humans:");
+        Console.WriteLine("Sorted humans by name:");
         var sortedHumans = mergedLists.OrderBy(human => human.FirstName).ThenBy(human => human.LastName);
         foreach (var human in sortedHumans)
         {

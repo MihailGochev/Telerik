@@ -27,9 +27,9 @@ class StringBuilderSubString
 
         Console.WriteLine("The full string:");
         Console.WriteLine(test);
-        Console.WriteLine("Called with start index:");
+        Console.WriteLine("Called with start index 10:");
         Console.WriteLine(test.Substring(10));
-        Console.WriteLine("Called with start index and lenght:");
+        Console.WriteLine("Called with start index 10 and lenght 4:");
         Console.WriteLine(test.Substring(10, 4));
     }
 }

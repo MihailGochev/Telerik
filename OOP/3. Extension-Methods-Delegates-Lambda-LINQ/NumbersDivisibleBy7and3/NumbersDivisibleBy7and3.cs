@@ -8,12 +8,12 @@ class NumbersDivisibleBy7and3
     static void Main()
     {
         List<int> numbers = new List<int>();
+        int maxNumber = 100;
 
-        for (int number = 0; number < 100; number++)
+        for (int number = 0; number < maxNumber; number++)
         {
             numbers.Add(number);
         }
-
 
         Console.WriteLine("All numbers:");
         foreach (var num in numbers)

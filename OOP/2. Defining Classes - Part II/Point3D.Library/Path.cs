@@ -14,11 +14,6 @@ namespace Point3D.Library
             get { return route; }
         }
 
-        public void AddPoint(Point point)
-        {
-            route.Add(point);
-        }
-
         public Path()
         {
             route = new List<Point>();
@@ -29,5 +24,9 @@ namespace Point3D.Library
             route = new List<Point>(pathSize);
         }
 
+        public void AddPoint(Point point)
+        {
+            route.Add(point);
+        }
     }
 }
