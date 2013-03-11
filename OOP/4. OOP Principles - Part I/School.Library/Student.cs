@@ -1,7 +1,20 @@
-﻿namespace School.Library
+﻿//Students have name and unique class number.
+namespace School.Library
 {
     public class Student : Person
     {
-        public int ClassNumber { get; set; }
+        private int classNumber;
+
+        public int ClassNumber
+        {
+            get
+            {
+                return this.classNumber;
+            }
+            set
+            {
+                this.classNumber = value;
+            }
+        }
     }
 }

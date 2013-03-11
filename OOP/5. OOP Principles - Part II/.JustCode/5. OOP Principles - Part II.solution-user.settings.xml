@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<JustCodeSettings Version="0.0" Timestamp="79b1cfe1-78fb-46a2-8015-fb100d7a764c">
+  <IgnoredErrorsAndWarningsSettings xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+    <IgnoredErrorsAndWarnings Version="2">
+      <FilePath>
+        <FileRelativePath>Bank.Library/IWithdrawable.cs</FileRelativePath>
+        <ProjectRelativePath>Bank.Library/2.%20Bank.Library.csproj</ProjectRelativePath>
+        <IgnoredElement>
+          <TextualIdentifier>17902698242042323941</TextualIdentifier>
+        </IgnoredElement>
+      </FilePath>
+    </IgnoredErrorsAndWarnings>
+  </IgnoredErrorsAndWarningsSettings>
+</JustCodeSettings>

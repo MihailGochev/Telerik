@@ -1,4 +1,5 @@
-﻿namespace HumanLibrary
+﻿//Define new class Student which is derived from Human and has new field – grade. 
+namespace HumanLibrary
 {
     public class Student : Human
     {
