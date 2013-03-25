@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcademyGeometry", "AcademyGeometry\AcademyGeometry.csproj", "{F9FC438A-14C4-499C-A94E-33DB6D916107}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeometryApi", "GeometryApi\GeometryApi.csproj", "{90CC1D92-690A-4ADB-AECA-EBD483AFDB2E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F9FC438A-14C4-499C-A94E-33DB6D916107}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9FC438A-14C4-499C-A94E-33DB6D916107}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9FC438A-14C4-499C-A94E-33DB6D916107}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9FC438A-14C4-499C-A94E-33DB6D916107}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90CC1D92-690A-4ADB-AECA-EBD483AFDB2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90CC1D92-690A-4ADB-AECA-EBD483AFDB2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90CC1D92-690A-4ADB-AECA-EBD483AFDB2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90CC1D92-690A-4ADB-AECA-EBD483AFDB2E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
